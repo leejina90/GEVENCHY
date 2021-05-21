@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - GIVENCHY</title>
+<link rel="stylesheet" type="text/css" href="../library/fontawesome-free-5.15.3-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+</head>
+<body>
+    <header id="main_header">
+        <div id="top_menu">
+            <div id="left_menu">
+                <div id="language">
+                    <label for="select"></label>
+                    <select name="select_lang" id="select">
+                        <option selected="selected" data-langNum="0">Language</option>
+                        <option data-lang="ko" data-langNum="1">Korean</option>
+                        <option data-lang="en" data-langNum="2">English</option>
+                    </select>
+                </div>
+                <div id="contact">
+                    <a href="../pages/contact.html" data-langNum="3">CONTACT</a>
+                </div>
+            </div>
+            <div id="right_menu">
+                <div id="login">
+                    <a href="../pages/login.html" data-langNum="4">SIGN IN</a>
+                </div>
+                <div id="search">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-bars fa-2x" id="mobile_btn"></i>
+        <i class="fas fa-times fa-2x" id="mobile_close_btn"></i>
+        <div id="bottom_menu">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../images/givenchy_logo.png" alt="Givenchy_logo">
+                </a>
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li><a href="../index.html#about" data-langNum="5">ABOUT</a></li>
+                    <li id="collection_menu">
+                        <a href="../index.html#collection" id="btn_collection" data-langNum="6">COLLECTION</a>
+                        <ul id="lnb">
+                            <li id="collection_sub_menu">
+                                <a href="../pages/all_collection.html" data-langNum="8">ALL COLLECTION</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#stage" data-langNum="7">STAGE</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="contact_section">
+        <form id="contact_wrap">
+            <h1 data-langNum="31">CONTACT</h1>
+            <p>
+                <label for="name" data-langNum="32">NAME</label>
+                <input type="text" class="txt_box" name="name" id="name">
+            </p>
+            <p>
+                <label for="phone" data-langNum="33">PHONE</label>
+                <input type="text" class="txt_box" name="phone" id="phone">    
+            </p>
+            <p>
+                <label for="email" data-langNum="34">E-MAIL</label>
+                <input type="text" class="txt_box" name="email" id="email">  
+            </p>
+            <p>
+                <label for="message" data-langNum="35">MESSAGE</label>
+                <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p>
+                <input type="button" name="submit" class="mail_btn" value="SEND"/>
+            </p>
+        </form>
+        
+    </section>
+
+    <footer id="main_footer">
+        <div id="gnb_footer">
+            <ul>
+                <li>Givenchy</li>
+                <li><a href="../index.html#about" data-langNum="9">About</a></li>
+                <li><a href="../index.html#collection" data-langNum="10">Collection</a></li>
+                <li><a href="pages/all_collection.html" data-langNum="11">All Collection</a></li>
+                <li><a href="../index.html#stage" data-langNum="12">Stage</a></li>
+            </ul>
+            <ul>
+                <li data-langNum="13">Language</li>
+                <li><a href="javascript:;" data-lang="ko" data-langNum="14" class="lang_btn">Korean</a></li>
+                <li><a href="javascript:;" data-lang="en" data-langNum="15" class="lang_btn">English</a></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li><a href="pages/login.html" data-langNum="16">Sign In</a></li>
+                <li><a href="javascript:;" data-langNum="17">Search</a></li>
+                <li><a href="pages/contact.html" data-langNum="18">Contact</a></li>
+            </ul>
+        </div>
+        <div id="bottom_footer">
+            <div id="footer_logo">
+                <a href="../index.html"><img src="../images/givenchy_footer_logo.png" alt=""></a>
+            </div>
+            <div id="copyright">
+                <span>Copyright 2021. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+	<!--js 파일-->
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/contact.js"></script>
+</body>
+</html>

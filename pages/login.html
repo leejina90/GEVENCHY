@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In - GIVENCHY</title>
+<link rel="stylesheet" type="text/css" href="../library/fontawesome-free-5.15.3-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+</head>
+<body>
+    <header id="main_header">
+        <div id="top_menu">
+            <div id="left_menu">
+                <div id="language">
+                    <label for="select"></label>
+                    <select name="select_lang" id="select">
+                        <option selected="selected" data-langNum="0">Language</option>
+                        <option data-lang="ko" data-langNum="1">Korean</option>
+                        <option data-lang="en" data-langNum="2">English</option>
+                    </select>
+                </div>
+                <div id="contact">
+                    <a href="../pages/contact.html" data-langNum="3">CONTACT</a>
+                </div>
+            </div>
+            <div id="right_menu">
+                <div id="login">
+                    <a href="../pages/login.html" data-langNum="4">SIGN IN</a>
+                </div>
+                <div id="search">
+                    <a href="javascript:;"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-bars fa-2x" id="mobile_btn"></i>
+        <i class="fas fa-times fa-2x" id="mobile_close_btn"></i>
+        <div id="bottom_menu">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../images/givenchy_logo.png" alt="Givenchy_logo">
+                </a>
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li><a href="../index.html#about" data-langNum="5">ABOUT</a></li>
+                    <li id="collection_menu">
+                        <a href="../index.html#collection" id="btn_collection" data-langNum="6">COLLECTION</a>
+                        <ul id="lnb">
+                            <li id="collection_sub_menu">
+                                <a href="../pages/all_collection.html" data-langNum="8">ALL COLLECTION</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#stage" data-langNum="7">STAGE</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="login_section">
+        <div id="login_wrap">
+            <img src="../images/givenchy_footer_logo.png" alt="givenchy_login_logo">
+            <form class="login_f">
+                <p>
+                    <label for="user_id"></label>
+                    <input type="text" name="user_id" id="user_id" value="korea" />
+                </p>
+                <p>
+                    <label for="user_pw"></label>
+                    <input type="password" name="user_pw" id="user_pw" value="1234" />
+                </p>
+                <p>
+                    <button type="button" id="login_btn" data-langNum="28">SIGN IN</button>
+                </p>
+            </form>
+            <div id="kakao_login_wrap">
+                <a id="kakao-login-btn"></a>
+                <a href="http://developers.kakao.com/logout"></a>
+            </div>
+        </div>
+        <div id="logout_wrap">
+            <h1 data-langNum="29"></h1>
+            <button type="button" id="logout_btn" data-langNum="30">SIGN OUT</button>
+        </div>
+    </section>
+    
+
+    <footer id="main_footer">
+        <div id="gnb_footer">
+            <ul>
+                <li>Givenchy</li>
+                <li><a href="../index.html#about" data-langNum="9">About</a></li>
+                <li><a href="../index.html#collection" data-langNum="10">Collection</a></li>
+                <li><a href="pages/all_collection.html" data-langNum="11">All Collection</a></li>
+                <li><a href="../index.html#stage" data-langNum="12">Stage</a></li>
+            </ul>
+            <ul>
+                <li data-langNum="13">Language</li>
+                <li><a href="javascript:;" data-lang="ko" data-langNum="14" class="lang_btn">Korean</a></li>
+                <li><a href="javascript:;" data-lang="en" data-langNum="15" class="lang_btn">English</a></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li><a href="javascript:;" data-langNum="16">Sign In</a></li>
+                <li><a href="javascript:;" data-langNum="17">Search</a></li>
+                <li><a href="pages/contact.html" data-langNum="18">Contact</a></li>
+            </ul>
+        </div>
+        <div id="bottom_footer">
+            <div id="footer_logo">
+                <a href="../index.html"><img src="../images/givenchy_footer_logo.png" alt="givenchy_footer_logo"></a>
+            </div>
+            <div id="copyright">
+                <span>Copyright 2021. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+	<!--js 파일-->
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

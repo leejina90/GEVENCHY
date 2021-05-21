@@ -1,0 +1,772 @@
+@charset "utf-8";
+@import url(reset.css);
+
+/* 한글은 노토산스로 */
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Thin.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Thin.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Thin.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Light.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Light.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Light.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Regular.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Regular.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Medium.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Medium.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Medium.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Bold.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Bold.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Bold.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/NotoSansKr/NotoSansKR-Black.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/NotoSansKR-Black.woff") format('woff'),
+        url("../fonts/NotoSansKr/NotoSansKR-Black.otf") format('opentype');
+} 
+/* 영문, 숫자는 오픈산스로 */
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    src: url("../fonts/openSans/OpenSans-SemiBold.woff2") format('woff2'),
+        url("../fonts/openSans/OpenSans-SemiBold.woff") format('woff'),
+        url("../fonts/openSans/OpenSans-SemiBold.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/OpenSans/OpenSans-Light.woff2") format('woff2'),
+        url("../fonts/OpenSans/OpenSans-Light.woff") format('woff'),
+        url("../fonts/OpenSans/OpenSans-Light.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/OpenSans/OpenSans-Regular.woff2") format('woff2'),
+        url("../fonts/OpenSans/OpenSans-Regular.woff") format('woff'),
+        url("../fonts/OpenSans/OpenSans-Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format('woff2'),
+        url("../fonts/OpenSans/OpenSans-SemiBold.woff") format('woff'),
+        url("../fonts/OpenSans/OpenSans-SemiBold.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/OpenSans/OpenSans-Bold.woff2") format('woff2'),
+        url("../fonts/OpenSans/OpenSans-Bold.woff") format('woff'),
+        url("../fonts/OpenSans/OpenSans-Bold.otf") format('opentype');
+}
+@font-face {
+    font-family: "NotoSansKR";
+    unicode-range: U+0020-007E;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/NotoSansKr/OpenSans-ExtraBold.woff2") format('woff2'),
+        url("../fonts/NotoSansKr/OpenSans-ExtraBold.woff") format('woff'),
+        url("../fonts/NotoSansKr/OpenSans-ExtraBold.otf") format('opentype');
+} 
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    word-break: break-all;
+}
+body {
+    font: 14px "NotoSansKR";
+    color: #444;
+    font-weight: 500;
+    min-width: 280px;
+    background-color: #000;
+}
+
+/* main_header */
+#main_header {
+    width: 100%;
+    background-color: #fff;
+}
+/* top_menu */
+#main_header #top_menu {
+    width: 1280px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+/* left_menu */
+#main_header #top_menu #left_menu {
+    float: left;
+    overflow: hidden;
+}
+#main_header #top_menu #left_menu #language {
+    float: left;
+}
+#main_header #top_menu #left_menu #contact {
+    float: left;
+    padding-left: 10px;
+}
+select {
+    width: 110px;
+    padding: 1px 1px;
+    border: 1px solid #999;
+    font-family: inherit;
+    background: url('../images/arrow.png') no-repeat 100% 50%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+/* right_menu */
+#main_header #top_menu #right_menu {
+    float: right;
+    overflow: hidden;
+}
+#main_header #top_menu #right_menu #login {
+    float: left;
+}
+#main_header #top_menu #right_menu #search {
+    float: left;
+    padding-left: 10px;
+}
+/* bottom_menu */
+#main_header #bottom_menu {
+    width: 1280px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#main_header #bottom_menu #logo {
+    float: left;
+}
+/* gnb */
+#main_header #bottom_menu #gnb {
+    float: right;
+}
+#main_header #bottom_menu #gnb ul {
+    width: 400px;
+    overflow: hidden;
+}
+#main_header #bottom_menu #gnb ul li {
+    width: 33.3%;
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #fff;
+}
+#main_header #bottom_menu #gnb ul li a {
+    width: 100%;
+    display:block;
+}
+#main_header #bottom_menu #gnb ul li a:hover {
+    background-color: #333;
+    color: #fff;
+    transition: 1s;
+}
+#collection_menu {
+    display: inline-block;
+}
+/* lnb */
+#lnb {
+    position: absolute;
+    display: none;
+}
+#lnb li {
+    display: inline-block;
+}
+#collection_menu:hover #lnb {
+    display: block;
+}
+#mobile_btn, #mobile_close_btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* main_footer */
+#main_footer {
+    color: #ddd;
+    background-color: #111;
+}
+/* gnb_footer */
+#main_footer #gnb_footer {
+    width: 1280px;
+    height: 300px;
+    line-height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 0;
+}
+#main_footer #gnb_footer ul {
+    overflow: hidden;
+    float: left;
+    margin-right: 300px;
+}
+#main_footer #gnb_footer ul li:first-child {
+    font-weight: bold !important;
+    font-size: 1.2em;
+    color: #ddd;
+}
+#main_footer #gnb_footer ul li {
+    color: #bbb;
+}
+#main_footer #gnb_footer ul li a:hover {
+    text-decoration: underline;
+}
+/* bottom_footer */
+#main_footer #bottom_footer {
+    width: 1280px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#main_footer #bottom_footer #footer_logo {
+    float: left;
+}
+#main_footer #bottom_footer #copyright {
+    float: right;
+}
+
+/* 반응형 */
+@media screen and (max-width: 280px) {
+    /* main_header */
+    #main_header {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    /* top_menu */
+    #main_header #top_menu {
+        width: 100%;
+        height: 280px;
+        line-height: 40px;
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 100px;
+        border-bottom: 2px solid #333;
+        display: none;
+    }
+    /* left_menu */
+    #main_header #top_menu #left_menu {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #language {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #contact {
+        float: none;
+        padding-left: 0px;
+    }
+    select {
+        width: 160px;
+        padding: 5px;
+        border: 2px solid #333;
+        font-size: 0.7em;
+    }
+    /* right_menu */
+    #main_header #top_menu #right_menu {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #login {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #search {
+        float: none;
+        padding-left: 0px;
+    }
+    #mobile_btn {
+        display: block;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100vw;
+        height: 100%;
+    }
+    #main_header #bottom_menu #logo {
+        float: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    #main_header #bottom_menu #logo img {
+        width: 100%;
+    }
+    /* gnb */
+    #main_header #bottom_menu #gnb {
+        float: none;
+        display: none;
+    }
+    #main_header #bottom_menu #gnb ul {
+        width: 100%;
+    }
+    #main_header #bottom_menu #gnb ul li {
+        width: 100%;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    /* lnb */
+    #lnb {
+        position: relative;
+        display: block;
+    }
+
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1.3em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+        height: 500px;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 100px;
+    }
+    #main_footer #gnb_footer ul li:first-child {
+        font-size: 1em;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+        height: 150px;
+        font-size: 0.7em;
+    }
+    #main_footer #bottom_footer #copyright {
+        float: left;
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 360px) {
+    /* main_header */
+    #main_header {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    /* top_menu */
+    #main_header #top_menu {
+        width: 100%;
+        height: 280px;
+        line-height: 40px;
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 100px;
+        border-bottom: 2px solid #333;
+        display: none;
+    }
+    /* left_menu */
+    #main_header #top_menu #left_menu {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #language {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #contact {
+        float: none;
+        padding-left: 0px;
+    }
+    select {
+        width: 160px;
+        padding: 5px;
+        border: 2px solid #333;
+        font-size: 0.7em;
+    }
+    /* right_menu */
+    #main_header #top_menu #right_menu {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #login {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #search {
+        float: none;
+        padding-left: 0px;
+    }
+    #mobile_btn {
+        display: block;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100vw;
+        height: 100%;
+    }
+    #main_header #bottom_menu #logo {
+        float: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    #main_header #bottom_menu #logo img {
+        width: 100%;
+    }
+    /* gnb */
+    #main_header #bottom_menu #gnb {
+        float: none;
+        display: none;
+    }
+    #main_header #bottom_menu #gnb ul {
+        width: 100%;
+    }
+    #main_header #bottom_menu #gnb ul li {
+        width: 100%;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    /* lnb */
+    #lnb {
+        position: relative;
+        display: block;
+    }
+
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1.3em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+        height: 500px;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 100px;
+    }
+    #main_footer #gnb_footer ul li:first-child {
+        font-size: 1em;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+        height: 150px;
+        font-size: 0.8em;
+    }
+    #main_footer #bottom_footer #copyright {
+        float: left;
+    }
+}
+@media screen and (min-width: 361px) and (max-width: 480px) {
+    /* main_header */
+    #main_header {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    /* top_menu */
+    #main_header #top_menu {
+        width: 100%;
+        height: 280px;
+        line-height: 40px;
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 100px;
+        border-bottom: 2px solid #333;
+        display: none;
+    }
+    /* left_menu */
+    #main_header #top_menu #left_menu {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #language {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #contact {
+        float: none;
+        padding-left: 0px;
+    }
+    select {
+        width: 160px;
+        padding: 5px;
+        border: 2px solid #333;
+        font-size: 0.7em;
+    }
+    /* right_menu */
+    #main_header #top_menu #right_menu {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #login {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #search {
+        float: none;
+        padding-left: 0px;
+    }
+    #mobile_btn {
+        display: block;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100vw;
+        height: 100%;
+    }
+    #main_header #bottom_menu #logo {
+        float: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    #main_header #bottom_menu #logo img {
+        width: 100%;
+    }
+    /* gnb */
+    #main_header #bottom_menu #gnb {
+        float: none;
+        display: none;
+    }
+    #main_header #bottom_menu #gnb ul {
+        width: 100%;
+    }
+    #main_header #bottom_menu #gnb ul li {
+        width: 100%;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    /* lnb */
+    #lnb {
+        position: relative;
+        display: block;
+    }
+
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1.3em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+        height: 500px;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 100px;
+    }
+    #main_footer #gnb_footer ul li:first-child {
+        font-size: 1em;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+        height: 150px;
+        font-size: 0.8em;
+    }
+    #main_footer #bottom_footer #copyright {
+        float: left;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* main_header */
+    #main_header {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    /* top_menu */
+    #main_header #top_menu {
+        width: 100%;
+        height: 280px;
+        line-height: 40px;
+        margin: 0;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 100px;
+        border-bottom: 2px solid #333;
+        display: none;
+    }
+    /* left_menu */
+    #main_header #top_menu #left_menu {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #language {
+        float: none;
+    }
+    #main_header #top_menu #left_menu #contact {
+        float: none;
+        padding-left: 0px;
+    }
+    select {
+        width: 160px;
+        padding: 5px;
+        border: 2px solid #333;
+        font-size: 0.7em;
+    }
+    /* right_menu */
+    #main_header #top_menu #right_menu {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #login {
+        float: none;
+    }
+    #main_header #top_menu #right_menu #search {
+        float: none;
+        padding-left: 0px;
+    }
+    #mobile_btn {
+        display: block;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100vw;
+        height: 100%;
+    }
+    #main_header #bottom_menu #logo {
+        float: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    #main_header #bottom_menu #logo img {
+        width: 100%;
+    }
+    /* gnb */
+    #main_header #bottom_menu #gnb {
+        float: none;
+        display: none;
+    }
+    #main_header #bottom_menu #gnb ul {
+        width: 100%;
+    }
+    #main_header #bottom_menu #gnb ul li {
+        width: 100%;
+        line-height: 60px;
+        font-size: 30px;
+    }
+    /* lnb */
+    #lnb {
+        position: relative;
+        display: block;
+    }
+
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1.3em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+        height: 500px;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 100px;
+    }
+    #main_footer #gnb_footer ul li:first-child {
+        font-size: 1em;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+        height: 150px;
+        font-size: 0.8em;
+    }
+    #main_footer #bottom_footer #copyright {
+        float: right;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #main_header #top_menu {
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1.1em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 200px;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    #main_header #top_menu {
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* bottom_menu */
+    #main_header #bottom_menu {
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* main_footer */
+    #main_footer {
+        padding: 30px;
+        font-size: 1em;
+    }
+    /* gnb_footer */
+    #main_footer #gnb_footer {
+        width: 100%;
+    }
+    #main_footer #gnb_footer ul {
+        margin-right: 250px;
+    }
+    /* bottom_footer */
+    #main_footer #bottom_footer {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1281px) {
+
+}
